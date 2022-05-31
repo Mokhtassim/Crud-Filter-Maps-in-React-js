@@ -53,7 +53,6 @@ export default function Home(){
     const [searchTitle, setSearchTitle] = useState('');
     const filterPost = (e) => {
         const userId = e.target.value;
-        // console.log(e.target.value);
         http.get('/posts?userId='+ userId).then(result => {
             if (userId !== "choose")
             {
@@ -94,7 +93,8 @@ export default function Home(){
                         <div className="input-group-prepend">
                             <label className="input-group-text">Filter by UserId</label>
                         </div>
-                        <select className="custom-select" id="inputGroupSelect01" style={{width: '20%'}} onChange={filterPost} value="all">
+                        <select className="custom-select" id="inputGroupSelect01" style={{width: '20%'}} onChange={filterPost}>
+                            <option selected>Choose...</option>
                             {options.map((item,i) =>(
                                 <option key={i} value={item.value}>{item.label}</option>
                             ))}

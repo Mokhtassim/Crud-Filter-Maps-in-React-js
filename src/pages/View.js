@@ -19,8 +19,8 @@ export default function View(props) {
         })
     }
     return(
-        <div>
-            <h2>User</h2>
+        <div className="mt-5">
+            <h2>Post</h2>
             <p>Title: {post.title}</p>
             <p>Body: {post.body}</p>
             <p>UserId: {post.userId}</p>

@@ -29,7 +29,7 @@ export default function Create() {
     }
     return( 
         <div>
-        <h2>New User</h2>
+        <h2>New Post</h2>
         <div className="row">
             <div className="col-md-6 justify-content-center">
                 <div className="form-group mb-2">
